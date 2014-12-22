@@ -65,6 +65,8 @@ module.exports = generators.Base.extend({
           }, function (answers) {
             done();
           });
+        } else {
+          done();
         }
       }.bind(this));
     }
@@ -72,6 +74,7 @@ module.exports = generators.Base.extend({
 
   writing: {
     routes: function () {
+      console.log("Writing");
       this.fs.copyTpl(
         this.templatePath('app/routes.js'),
         this.destinationPath('app/routes.js'),
@@ -80,6 +83,7 @@ module.exports = generators.Base.extend({
     },
 
     package: function () {
+      console.log("Writing");
       this.fs.copyTpl(
         this.templatePath('package.json'),
         this.destinationPath('package.json'),

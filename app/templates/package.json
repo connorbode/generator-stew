@@ -4,6 +4,7 @@
   "description": "<%= description %>",
   "main": "",
   "scripts": {
+    "start": "node ./app/routes.js",
     "test": ""
   },
   "author": "<%= author %>",
